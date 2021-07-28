@@ -47,5 +47,18 @@ namespace ExceptionHandling
             }
         }
 
+        public void ShouldReturnCustomUserExceptionForMobileNO()
+        {
+            try
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, pattern.validateMobileNO(null));
+            }
+            catch (RegisterUser e)
+            {
+                Assert.AreEqual("Invalid Mobile Number", e.Message);
+            }
+        }
+
     }
 }
