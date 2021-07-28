@@ -23,6 +23,9 @@ namespace Day21_ExceptionHandlingUserRegistration
             string email = Console.ReadLine();
             Console.WriteLine("Test Result Is : " + pattern.validateEmail(email));
 
+            Console.WriteLine("Enter Mobile Number:");
+            string mobileNO = Console.ReadLine();
+            Console.WriteLine("Test Result Is : " + pattern.validateMobileNO(mobileNO));
 
 
             Console.ReadKey();
