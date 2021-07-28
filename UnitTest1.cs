@@ -60,5 +60,18 @@ namespace ExceptionHandling
             }
         }
 
+        public void ShouldReturnCustomUserExceptionForPassword()
+        {
+            try
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, pattern.validatePassword(null));
+            }
+            catch (RegisterUser e)
+            {
+                Assert.AreEqual("Invalid Password", e.Message);
+            }
+        }
+
     }
 }
