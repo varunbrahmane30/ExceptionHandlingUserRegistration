@@ -18,6 +18,13 @@ namespace Day21_ExceptionHandlingUserRegistration
             string lastName = Console.ReadLine();
             Console.WriteLine("Test Result Is : " + pattern.validateLastName(lastName));
 
+
+            Console.WriteLine("Enter Email:");
+            string email = Console.ReadLine();
+            Console.WriteLine("Test Result Is : " + pattern.validateEmail(email));
+
+
+
             Console.ReadKey();
         }
     }

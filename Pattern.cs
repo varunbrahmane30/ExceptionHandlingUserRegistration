@@ -9,6 +9,7 @@ namespace Day21_ExceptionHandlingUserRegistration
     {
         public static String Regex_Name = "^[A-Z]{1}[A-Za-z]{1}[a-zA-Z]*$";
         public static string Regex_lName = "^[A-Z]{1}[A-Za-z]{1}[a-zA-Z]*$";
+        public static string Regex_Email = "^[A-Z0-9a-z]{1,}([.#$^][A-Za-z0-9]+)*[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
 
         public bool validateFirstName(string firstName)
         {
@@ -27,6 +28,16 @@ namespace Day21_ExceptionHandlingUserRegistration
             }
             return Regex.IsMatch(lastName, Regex_lName);
         }
+
+        public bool validateEmail(string email)
+        {
+            if (email == null)
+            {
+                throw new RegisterUser(RegisterUser.ExceptionsType.Invalid_MESSAGE, "Entered Invalid Email Address");
+            }
+            return Regex.IsMatch(email, Regex_Email);
+        }
+
 
     }
 }
