@@ -20,5 +20,18 @@ namespace ExceptionHandling
                 Assert.AreEqual("Invalid FirstName", e.Message);
             }
         }
+
+        public void ShouldReturnCustomUserExceptionForLastName()
+        {
+            try
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, pattern.validateLastName(null));
+            }
+            catch (RegisterUser e)
+            {
+                Assert.AreEqual("Invalid LastName", e.Message);
+            }
+        }
     }
 }
