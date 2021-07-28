@@ -16,8 +16,7 @@ namespace Day21_ExceptionHandlingUserRegistration
 
             Console.Write("Enter Last Name: ");
             string lastName = Console.ReadLine();
-            Console.WriteLine("Test Result Is : " + pattern.validatelastName(firstName));
-
+            Console.WriteLine("Test Result Is : " + pattern.validateLastName(lastName));
 
             Console.ReadKey();
         }
